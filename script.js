@@ -12,3 +12,19 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+function passwordCriteria () {
+var length = prompt('Choose a password length.');
+console.log('length', length);
+
+if (length >= 8  && length <= 128) {
+  alert('nice')
+} 
+else {
+  alert('Please enter a number between 8 and 128.')
+  passwordCriteria();
+}
+}
+
+passwordCriteria();
